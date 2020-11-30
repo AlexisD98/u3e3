@@ -1,0 +1,47 @@
+package u3e3;
+import java.util.Random;
+
+public class metodosu3e3 {
+    int tam = 0;
+    private Nodo tope;
+    Random ale = new Random();
+    int nume;
+
+    public void insertar() {
+        /*
+            int numero = (int)(Math.random()*(X-Y+1)+Y;
+            int numero = (int)(Math.random()*(75-25+1)+25);
+            int numero = (int)(Math.random()*(500-50+1)+50;
+         */
+        for (int a = 0; a < 10; a++) {
+            nume = ale.nextInt(500 - 50 + 1) + 50;
+            empuja(nume);
+            System.out.println(nume);
+        }
+    }
+
+    public void empuja(int nume) {
+        Nodo nodo = new Nodo(nume);
+        nodo.sig = tope;
+        tope = nodo;
+        tam++;
+    }
+
+    public void mostrar() {
+            Nodo recorre = tope;
+        while (recorre != null) {
+            System.out.println(recorre.el);
+            recorre = recorre.sig;
+        }
+    }
+
+    public void eliminar() {
+        if (tam == 0) {
+            System.out.println("No tines datos aun :(");
+        } else {
+            tope = tope.sig;
+            tam--;
+        }
+    }
+    
+}
