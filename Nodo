@@ -1,0 +1,12 @@
+package u3e3;
+public class Nodo {
+    Nodo sig;
+    int el;
+    public Nodo(int z){
+        this.el=z;
+        this.sig=null;
+    }
+    public Nodo(){
+        
+    }
+}
