@@ -1,0 +1,48 @@
+package u3e3;
+import java.util.*;
+public class U3E3 {
+    /*
+    10 Numeros aleatorios rango de 50 a 500
+    1. Daré mostrar "No debe mostrar nada"
+    2. Daré eliminar "Pila vacia"
+    3. Insertare "De forma automatica ustedes ingresan los 10 digitios"
+    4.Daré Mostrar "Debera mostrar los 10 elementos creados"
+    5. Daré Eliminar "Hasta vaciar la pila"
+    CONDICIONAL: Si llego a eliminar x cantdad de datos y vuelvo a insertar
+    me insetara nuevamente 10 digitos y al mostrar deben aparecer todos los 
+    numeros.
+     */
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        metodosu3e3 objmetodosu3e3 = new metodosu3e3();
+        int opc, c = 0;
+        do {
+            System.out.println(" *Numeros Aleatorios GamerPink* ");
+            System.out.println("-----------------------------");
+            System.out.println("1 Insertar Dato");
+            System.out.println("2 Mostrar Dato");
+            System.out.println("3 Eliminar Dato");
+            System.out.println("4 Salir");
+            System.out.println("-----------------------------");
+            opc = entrada.nextInt();
+            System.out.println("-----------------------------");
+            switch (opc) {
+                case 1:
+                    objmetodosu3e3.insertar();
+                    System.out.println("******************************");
+                    break;
+                case 2:
+                    objmetodosu3e3.mostrar();
+                    System.out.println("******************************");
+                    break;
+                case 3:
+                    objmetodosu3e3.eliminar();
+                    System.out.println("******************************");
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+            }//switch
+        } while (c == 0);
+    }
+}
